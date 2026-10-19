@@ -125,11 +125,18 @@ export default function Hero() {
         >
           <div className="hero-avatar-ring">
             <div className="hero-avatar">
-              {/* ⬇️ REPLACE src with your actual photo path */}
-              <div className="avatar-placeholder">
-                <span>YOUR<br/>PHOTO</span>
-              </div>
+              <img
+                src="/avatar.gif"
+                alt="Anshil 3D Waving Avatar"
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = '/avatar.png';
+                }}
+              />
             </div>
+          </div>
+          <div className="avatar-speech-bubble">
+            Hi! <span className="waving-hand-emoji">👋</span>
           </div>
           <div className="floating-chip chip-1">⚛️ React</div>
           <div className="floating-chip chip-2">🟢 Node.js</div>

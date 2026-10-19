@@ -119,7 +119,60 @@
   animation: counter-spin 8s linear infinite;
 }
 [data-theme='light'] .hero-avatar { background: rgba(233,213,255,0.7); }
-.hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  animation: avatarFloat 4s ease-in-out infinite;
+}
+
+@keyframes avatarFloat {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.02) translateY(-3px); }
+}
+
+/* Waving avatar speech bubble */
+.avatar-speech-bubble {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  background: var(--gradient-accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.86rem;
+  padding: 0.38rem 0.95rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 18px rgba(0, 229, 255, 0.45), 0 0 15px rgba(255, 78, 205, 0.3);
+  animation: float 2.8s ease-in-out infinite;
+  z-index: 4;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+[data-theme='light'] .avatar-speech-bubble {
+  box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35);
+}
+
+/* Continuously waving hand animation */
+.waving-hand-emoji {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: waveHand 1.6s ease-in-out infinite;
+}
+
+@keyframes waveHand {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(18deg); }
+  30%  { transform: rotate(-10deg); }
+  45%  { transform: rotate(18deg); }
+  60%  { transform: rotate(-6deg); }
+  75%  { transform: rotate(14deg); }
+  100% { transform: rotate(0deg); }
+}
 
 .avatar-placeholder {
   width: 100%;

@@ -46,8 +46,16 @@ export default function About() {
           <FadeIn direction="right" delay={0.1}>
             <div className="about-photo-wrap">
               <div className="about-photo">
-                {/* ⬇️ Replace with: <img src="/profile.jpg" alt="Profile" /> */}
-                <div className="photo-placeholder">YOUR PHOTO</div>
+                <img
+                  src="/profile.jpg"
+                  alt="Anshil Singh Bisth"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const placeholder = e.currentTarget.nextElementSibling;
+                    if (placeholder) placeholder.style.display = 'flex';
+                  }}
+                />
+                <div className="photo-placeholder" style={{ display: 'none' }}>YOUR PHOTO</div>
               </div>
               <div className="about-photo-bg" />
             </div>
