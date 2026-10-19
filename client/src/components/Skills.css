@@ -1,0 +1,184 @@
+/* Skills.css — Glass Aurora */
+.skills-section { background: transparent; }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+/* ── Skill group card ── */
+.skill-group { padding: 1.75rem; }  /* .card class already applies glass */
+
+.skill-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+.skill-group-icon { font-size: 1.5rem; }
+.skill-group-header h3 { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+
+.skill-list { display: flex; flex-direction: column; gap: 1.15rem; }
+
+/* ── Skill bar item ── */
+.skill-item {
+  position: relative;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: transform 0.25s ease;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.42rem;
+}
+.skill-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  display: inline-block;
+  transition: color var(--transition), transform 0.25s ease;
+}
+.skill-level {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* Hover micro-interactions */
+.skill-item:hover .skill-name {
+  color: var(--accent);
+  transform: translateX(3px);
+}
+.skill-item:hover .skill-level {
+  transform: scale(1.08);
+}
+.skill-item:hover .skill-bar-bg {
+  border-color: rgba(0, 229, 255, 0.45);
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.22);
+}
+[data-theme='light'] .skill-item:hover .skill-bar-bg {
+  border-color: rgba(124, 58, 237, 0.45);
+  box-shadow: 0 0 14px rgba(124, 58, 237, 0.20);
+}
+.skill-item:hover .skill-bar-fill {
+  filter: brightness(1.15);
+}
+
+/* Bar background */
+.skill-bar-bg {
+  height: 8px;
+  background: rgba(255,255,255,0.12);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  position: relative;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+[data-theme='light'] .skill-bar-bg { background: rgba(0,0,0,0.08); }
+
+/* Bar fill — Framer Motion animates width via inline style.
+   The ::after pseudo-element overlays the aurora gradient on top. */
+.skill-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  position: relative;
+  overflow: hidden;
+  transition: filter var(--transition);
+}
+.skill-bar-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #00e5ff, #ff4ecd);
+  border-radius: inherit;
+  pointer-events: none;
+}
+[data-theme='light'] .skill-bar-fill::after {
+  background: linear-gradient(90deg, #7c3aed, #db2777);
+}
+
+/* ── Professional Level Tooltip ── */
+.skill-tooltip {
+  position: absolute;
+  top: -32px;
+  right: 0;
+  background: rgba(20, 16, 50, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.45);
+  color: #ffffff;
+  font-size: 0.73rem;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: var(--radius-pill, 9999px);
+  box-shadow: 0 4px 18px rgba(0, 229, 255, 0.28), 0 2px 8px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.34, 1.56, .64, 1);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+[data-theme='light'] .skill-tooltip {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(124, 58, 237, 0.35);
+  color: #1e1b4b;
+  box-shadow: 0 4px 18px rgba(124, 58, 237, 0.22), 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Tooltip arrow indicator */
+.skill-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 14px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(20, 16, 50, 0.90);
+}
+[data-theme='light'] .skill-tooltip::after {
+  border-top-color: rgba(255, 255, 255, 0.94);
+}
+
+.skill-item:hover .skill-tooltip {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.tooltip-level {
+  color: var(--accent);
+  font-weight: 700;
+}
+.tooltip-sep {
+  opacity: 0.45;
+  font-size: 0.65rem;
+}
+.tooltip-tier {
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+/* ── Tablet ≤768px: 2 columns ── */
+@media (max-width: 768px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .skill-group { padding: 1.25rem; }
+}
+
+/* ── Mobile ≤560px: 1 column ── */
+@media (max-width: 560px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-tooltip { display: none; }
+}

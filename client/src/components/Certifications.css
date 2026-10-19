@@ -1,0 +1,94 @@
+/* Certifications.css — Glass Aurora */
+.cert-section { background: transparent; }
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.75rem;
+}
+
+.cert-card {
+  padding: 1.75rem;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(.34,1.56,.64,1), box-shadow var(--transition);
+}
+.cert-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--shadow-md), 0 0 25px rgba(0,229,255,0.18);
+}
+[data-theme='light'] .cert-card:hover {
+  box-shadow: var(--shadow-md), 0 0 20px rgba(124,58,237,0.15);
+}
+
+.cert-placeholder-tag {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cert-icon { font-size: 2.5rem; margin-bottom: 0.85rem; }
+
+.cert-title {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.45rem;
+  line-height: 1.4;
+}
+.cert-issuer {
+  font-size: 0.83rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.cert-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+}
+
+.cert-link {
+  display: inline-block;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 0.32rem 1rem;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition);
+}
+.cert-link:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+[data-theme='light'] .cert-link:hover { color: #fff; }
+
+.cert-link-placeholder {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Tablet ≤768px ── */
+@media (max-width: 768px) {
+  .cert-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .cert-card { padding: 1.25rem; }
+}
+
+/* ── Mobile ≤480px ── */
+@media (max-width: 480px) {
+  .cert-grid { grid-template-columns: 1fr; }
+}
