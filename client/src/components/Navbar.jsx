@@ -34,9 +34,9 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#hero" className="nav-logo" onClick={e => handleLink(e, '#hero')}>
-          <img src="/logo.svg" alt="Anshil Singh Bisth Logo" className="nav-logo-icon" />
+          <img src="/logo.svg" alt="Logo" className="nav-logo-icon" />
           <span className="nav-logo-text">
-            Anshil<span className="nav-logo-dot">.</span><span className="nav-logo-ext">dev</span>
+            <span className="logo-bracket">&lt;</span>Portfolio<span className="logo-bracket">/&gt;</span>
           </span>
         </a>
 

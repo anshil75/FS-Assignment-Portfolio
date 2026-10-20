@@ -36,9 +36,9 @@
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  font-family: var(--font-main);
-  font-size: 1.25rem;
+  gap: 0.75rem;
+  font-family: var(--font-code);
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--text);
   flex-shrink: 0;
@@ -51,29 +51,27 @@
   opacity: 0.95;
 }
 .nav-logo-icon {
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
-  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.45));
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.5));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 .nav-logo:hover .nav-logo-icon {
   transform: rotate(8deg) scale(1.08);
-  filter: drop-shadow(0 0 14px rgba(0, 229, 255, 0.75)) drop-shadow(0 0 20px rgba(255, 78, 205, 0.5));
+  filter: drop-shadow(0 0 16px rgba(0, 229, 255, 0.8)) drop-shadow(0 0 24px rgba(255, 78, 205, 0.55));
 }
 .nav-logo-text {
+  font-family: var(--font-code);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
-.nav-logo-dot {
+.logo-bracket {
   color: var(--accent);
+  transition: color var(--transition);
 }
-.nav-logo-ext {
+.nav-logo:hover .logo-bracket {
   color: var(--accent-magenta);
-  font-family: var(--font-code);
-  font-size: 0.88em;
-  font-weight: 600;
-  margin-left: 1px;
 }
 
 
@@ -187,6 +185,7 @@
 /* ── Small mobile ≤480px ── */
 @media (max-width: 480px) {
   .navbar { top: 6px; left: 0.5rem; right: 0.5rem; }
-  .nav-logo { font-size: 1.15rem; }
+  .nav-logo { font-size: 1.15rem; gap: 0.5rem; }
+  .nav-logo-icon { width: 34px; height: 34px; }
   .nav-links { top: 70px; left: 0.5rem; right: 0.5rem; }
 }
