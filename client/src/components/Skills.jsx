@@ -8,20 +8,20 @@ const SKILL_GROUPS = [
     title: 'Frontend',
     icon: '🎨',
     skills: [
-      { name: 'React.js',    level: 85, color: '#61DAFB' },
-      { name: 'JavaScript',  level: 80, color: '#F7DF1E' },
+      { name: 'React.js',    level: 60, color: '#61DAFB' },
+      { name: 'JavaScript',  level: 70, color: '#F7DF1E' },
       { name: 'HTML5 / CSS3',level: 90, color: '#E34F26' },
-      { name: 'Framer Motion',level: 70, color: '#BB4DE8' },
+      { name: 'Framer Motion',level: 72, color: '#BB4DE8' },
     ],
   },
   {
     title: 'Backend',
     icon: '⚙️',
     skills: [
-      { name: 'Node.js',    level: 78, color: '#339933' },
-      { name: 'Express.js', level: 75, color: '#aaaaaa' },
-      { name: 'MongoDB',    level: 72, color: '#47A248' },
-      { name: 'REST APIs',  level: 80, color: '#6366f1' },
+      { name: 'Node.js',    level: 60, color: '#339933' },
+      { name: 'Express.js', level: 60, color: '#aaaaaa' },
+      { name: 'MongoDB',    level: 65, color: '#47A248' },
+      { name: 'REST APIs',  level: 70, color: '#6366f1' },
     ],
   },
   {
@@ -30,14 +30,14 @@ const SKILL_GROUPS = [
     skills: [
       { name: 'Git & GitHub', level: 82, color: '#F05032' },
       { name: 'VS Code',      level: 90, color: '#007ACC' },
-      { name: 'Postman',      level: 75, color: '#FF6C37' },
+      { name: 'Postman',      level: 60, color: '#FF6C37' },
       { name: 'Mongoose ODM', level: 70, color: '#880000' },
     ],
   },
 ];
 
 function getProficiency(level) {
-  if (level >= 85) return 'Expert';
+  if (level >= 90) return 'Expert';
   if (level >= 75) return 'Advanced';
   if (level >= 65) return 'Intermediate';
   return 'Foundational';
