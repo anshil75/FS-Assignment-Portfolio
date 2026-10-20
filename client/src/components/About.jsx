@@ -47,7 +47,7 @@ export default function About() {
             <div className="about-photo-wrap">
               <div className="about-photo">
                 <img
-                  src="/profile.jpg"
+                  src="/profile.png"
                   alt="Anshil Singh Bisth"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
