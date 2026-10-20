@@ -34,7 +34,10 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#hero" className="nav-logo" onClick={e => handleLink(e, '#hero')}>
-          <span className="logo-bracket">&lt;</span>Portfolio<span className="logo-bracket">/&gt;</span>
+          <img src="/logo.svg" alt="Anshil Singh Bisth Logo" className="nav-logo-icon" />
+          <span className="nav-logo-text">
+            Anshil<span className="nav-logo-dot">.</span><span className="nav-logo-ext">dev</span>
+          </span>
         </a>
 
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>

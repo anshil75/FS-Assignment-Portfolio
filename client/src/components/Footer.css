@@ -21,12 +21,34 @@
 }
 
 .footer-brand {
-  font-family: var(--font-code);
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-main);
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
 }
-.logo-bracket { color: var(--accent); }
+.footer-logo-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.45));
+}
+.footer-logo-text {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.footer-logo-dot {
+  color: var(--accent);
+}
+.footer-logo-ext {
+  color: var(--accent-magenta);
+  font-family: var(--font-code);
+  font-size: 0.88em;
+  font-weight: 600;
+  margin-left: 1px;
+}
 
 .footer-tagline {
   font-size: 0.88rem;

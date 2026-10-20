@@ -13,7 +13,10 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <span className="logo-bracket">&lt;</span>Portfolio<span className="logo-bracket">/&gt;</span>
+          <img src="/logo.svg" alt="Anshil Singh Bisth Logo" className="footer-logo-icon" />
+          <span className="footer-logo-text">
+            Anshil<span className="footer-logo-dot">.</span><span className="footer-logo-ext">dev</span>
+          </span>
         </div>
 
         <p className="footer-tagline">
