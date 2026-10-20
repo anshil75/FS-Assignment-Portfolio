@@ -1,6 +1,4 @@
-// components/Projects.jsx — Project showcase cards
-// CHANGE: Added useTilt hook for 3D mouse-tilt on cards.
-// UNCHANGED: PROJECTS data, card content, links, Framer Motion scroll reveal, all logic.
+
 import React, { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import useTilt from '../hooks/useTilt';
