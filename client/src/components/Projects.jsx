@@ -43,8 +43,8 @@ const PROJECTS = [
     id: 3,
     name: 'Project Three — UI Designing of an Ecommerce Website',
     description:
-      'Designed and developed a modern, user-friendly e-commerce website interface focused on clean layouts, intuitive navigation, and a seamless shopping experience. Created responsive web pages with interactive elements and visually appealing product displays to enhance usability across different screen sizes. Used Figma for UI/UX design and prototyping, along with HTML, CSS, JavaScript, and React to build the frontend interface.' +
-      'Learned how to structure a standard website, design essential components such as navigation bars, product cards, search bars, banners, and footers, and create consistent layouts with effective spacing, typography, and colors.',
+      'Designed and developed a modern, user-friendly e-commerce website interface focused on clean layouts, and a seamless shopping experience. Created responsive web pages with interactive elements and displays to enhance usability across different screen sizes.' +
+      'Learned how to structure a standard website, design essential components such as navigation bars, search bars, headers, and footers, and create consistent layouts with effective spacing and colors.',
     tech: ['Figma', 'HTML', 'CSS', 'JavaScript', 'React'],
     github: 'https://github.com/anshil75/UI'
   },
