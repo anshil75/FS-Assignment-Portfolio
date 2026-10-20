@@ -37,16 +37,16 @@ const PROJECTS = [
       'A streaming AI chat app with spoken replies, on-demand image generation, and voice input. ' +
       'Chat - streaming responses completions API. Text-to-speech - the speaker icon on any assistant message converts it to audio and plays it back. Generated on demand. Image generation. Voice input - the mic icon records audio in the browser, sends it to the backend, and transcribes straight into the chat input.',
     tech: ['JavaScript', 'HTML5/CSS', 'API', 'Next.js', 'React.js', 'Vercel'],
-    github: 'https://github.com/yourusername/project-two'
+    github: 'https://github.com/anshil75/Aether'
   },
   {
     id: 3,
-    name: 'Project Three — [Replace with your project name]',
+    name: 'Project Three — UI Designing of an Ecommerce Website',
     description:
-      'Placeholder: Replace this with a real description of your third project. ' +
-      'Include what you learned, challenges overcome, and the impact of the project.',
-    tech: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose'],
-    github: 'https://github.com/yourusername/project-three'
+      'Designed and developed a modern, user-friendly e-commerce website interface focused on clean layouts, intuitive navigation, and a seamless shopping experience. Created responsive web pages with interactive elements and visually appealing product displays to enhance usability across different screen sizes. Used Figma for UI/UX design and prototyping, along with HTML, CSS, JavaScript, and React to build the frontend interface.' +
+      'Learned how to structure a standard website, design essential components such as navigation bars, product cards, search bars, banners, and footers, and create consistent layouts with effective spacing, typography, and colors.',
+    tech: ['Figma', 'HTML', 'CSS', 'JavaScript', 'React'],
+    github: 'https://github.com/anshil75/UI'
   },
 ];
 
