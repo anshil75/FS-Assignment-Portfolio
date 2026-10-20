@@ -22,8 +22,6 @@ function filterMatches(project, filter) {
   }
   return true;
 }
-
-// ⬇️ REPLACE these placeholders with your actual projects before submission
 const PROJECTS = [
   {
     id: 1,
@@ -32,8 +30,7 @@ const PROJECTS = [
       'This project analyzes the relationship between public sentiment and cryptocurrency price movements using real-world data. ' +
       'The project demonstrates a correlation between sentiment polarity and market movements, showing how social and news sentiment can influence crypto prices.',
     tech: ['Python', 'Pandas', 'Scikit-learn', 'Natural Language Processing (NLP)'],
-    github: 'https://github.com/anshil75/Sentiment-Analysis-for-Cryptocurrency-Markets',
-    demo: '#', // Replace with live demo URL or remove if not deployed
+    github: 'https://github.com/anshil75/Sentiment-Analysis-for-Cryptocurrency-Markets'
   },
   {
     id: 2,
@@ -42,9 +39,7 @@ const PROJECTS = [
       'A streaming AI chat app with spoken replies, on-demand image generation, and voice input. ' +
       'Chat - streaming responses completions API. Text-to-speech - the speaker icon on any assistant message converts it to audio and plays it back. Generated on demand. Image generation. Voice input - the mic icon records audio in the browser, sends it to the backend, and transcribes straight into the chat input.',
     tech: ['JavaScript', 'HTML5/CSS', 'API', 'Next.js', 'React.js', 'Vercel'],
-    github: 'https://github.com/yourusername/project-two',
-    demo: '#',
-    status: 'placeholder',
+    github: 'https://github.com/yourusername/project-two'
   },
   {
     id: 3,
@@ -53,16 +48,13 @@ const PROJECTS = [
       'Placeholder: Replace this with a real description of your third project. ' +
       'Include what you learned, challenges overcome, and the impact of the project.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose'],
-    github: 'https://github.com/yourusername/project-three',
-    demo: '#',
-    status: 'placeholder',
+    github: 'https://github.com/yourusername/project-three'
   },
 ];
 
 function ProjectCard({ project, index }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
-  // 3D tilt — pure styling; zero effect on data or handlers
   const { style: tiltStyle, onMouseMove, onMouseLeave } = useTilt();
 
   return (
@@ -141,7 +133,6 @@ export default function Projects() {
           <div className="line" />
         </motion.div>
 
-        {/* Technology Filter Pills */}
         <div className="projects-filter-bar">
           {FILTERS.map(filter => {
             const count = filter === 'All' ? PROJECTS.length : PROJECTS.filter(p => filterMatches(p, filter)).length;

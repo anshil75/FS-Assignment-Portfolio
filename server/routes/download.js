@@ -4,7 +4,6 @@ const fs = require('fs');
 
 const router = express.Router();
 
-// Helper to send file safely
 function sendFile(res, fileName) {
   const filePath = path.resolve(__dirname, '..', 'files', fileName);
 

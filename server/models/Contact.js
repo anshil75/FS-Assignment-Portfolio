@@ -1,4 +1,4 @@
-// models/Contact.js - Mongoose schema for contact form submissions
+
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 

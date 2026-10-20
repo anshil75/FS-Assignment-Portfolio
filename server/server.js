@@ -1,4 +1,4 @@
-// server.js - Entry point for Express backend
+
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -19,7 +19,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Connect to MongoDB
+
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));

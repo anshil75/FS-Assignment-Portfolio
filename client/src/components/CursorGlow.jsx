@@ -20,7 +20,7 @@ export default function CursorGlow() {
     const onMove = (e) => {
       x = e.clientX; y = e.clientY;
       const now = performance.now();
-      if (now - lastTrail > 70) {            // throttle trail bubbles
+      if (now - lastTrail > 70) {          
         lastTrail = now;
         const b = document.createElement("div");
         b.className = "cursor-trail";
@@ -33,7 +33,7 @@ export default function CursorGlow() {
 
     const loop = () => {
       if (glowRef.current) {
-        gx += (x - gx) * 0.15;               // smooth easing toward the pointer
+        gx += (x - gx) * 0.15;              
         gy += (y - gy) * 0.15;
         glowRef.current.style.transform = `translate3d(${gx}px, ${gy}px, 0) translate(-50%, -50%)`;
       }

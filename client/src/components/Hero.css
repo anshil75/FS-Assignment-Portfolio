@@ -1,4 +1,4 @@
-/* Hero.css — Glass Aurora */
+/* Hero.css */
 
 .hero-section {
   min-height: 100vh;
@@ -6,13 +6,11 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 95px;   /* navbar height (64) + floating gap (12) + buffer */
+  padding-top: 95px; 
 }
 
-/* Old gradient div — body is the gradient now; keep div in DOM but hide */
 .hero-bg-gradient { display: none; }
 
-/* ── Layout ── */
 .hero-content {
   display: flex;
   align-items: center;
@@ -22,7 +20,6 @@
   padding: 2rem 0;
 }
 
-/* ── Text side ── */
 .hero-text { flex: 1; min-width: 0; }
 
 .hero-greeting {
@@ -32,14 +29,13 @@
   margin-bottom: 0.5rem;
 }
 
-/* Shimmer gradient name */
 .hero-name {
   font-size: clamp(2rem, 5.5vw, 4rem);
   font-weight: 800;
   letter-spacing: -1px;
   word-break: break-word;
   margin-bottom: 0.6rem;
-  /* Shimmer */
+  
   background: linear-gradient(90deg, #fff, #ffd1ff, #a5f3fc, #fff);
   background-size: 300% 100%;
   -webkit-background-clip: text;
@@ -63,7 +59,7 @@
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-/* Light mode: shimmer uses darker palette */
+
 [data-theme='light'] .hero-name {
   background: linear-gradient(90deg, #1e1b4b, #7c3aed, #0ea5e9, #1e1b4b);
   background-size: 300% 100%;
@@ -85,7 +81,7 @@
   align-items: center;
 }
 
-/* ── Visual side ── */
+
 .hero-visual {
   position: relative;
   flex-shrink: 0;
@@ -96,7 +92,7 @@
   justify-content: center;
 }
 
-/* Aurora rotating gradient ring */
+
 .hero-avatar-ring {
   width: 270px;
   height: 270px;
@@ -106,7 +102,8 @@
   animation: spin 8s linear infinite;
   box-shadow: 0 0 30px rgba(0,229,255,0.5), 0 0 60px rgba(255,78,205,0.25);
 }
-/* Avatar counter-rotates so content stays still */
+
+
 .hero-avatar {
   width: 100%;
   height: 100%;
@@ -118,6 +115,7 @@
   justify-content: center;
   animation: counter-spin 8s linear infinite;
 }
+
 [data-theme='light'] .hero-avatar { background: rgba(233,213,255,0.7); }
 .hero-avatar img {
   width: 100%;
@@ -132,7 +130,6 @@
   50% { transform: scale(1.02) translateY(-3px); }
 }
 
-/* Waving avatar speech bubble */
 .avatar-speech-bubble {
   position: absolute;
   top: 10px;
@@ -157,7 +154,7 @@
   box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35);
 }
 
-/* Continuously waving hand animation */
+
 .waving-hand-emoji {
   display: inline-block;
   transform-origin: 70% 70%;
@@ -188,7 +185,7 @@
   border-radius: 50%;
 }
 
-/* Floating glass chips */
+
 .floating-chip {
   position: absolute;
   background: var(--glass-bg);
@@ -210,7 +207,7 @@
 @keyframes float  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 @keyframes float2 { 0%,100%{transform:translateY(-50%)} 50%{transform:translateY(calc(-50% - 8px))} }
 
-/* Scroll indicator */
+
 .scroll-indicator {
   position: absolute;
   bottom: 1.5rem;
@@ -221,13 +218,13 @@
   opacity: 0.7;
 }
 
-/* ── Tablet ≤900px ── */
+
 @media (max-width: 900px) {
   .hero-visual { width: 240px; height: 240px; }
   .hero-avatar-ring { width: 218px; height: 218px; }
 }
 
-/* ── Mobile ≤768px: stacked ── */
+
 @media (max-width: 768px) {
   .hero-section { padding-top: 80px; min-height: 100svh; }
   .hero-content { flex-direction: column-reverse; text-align: center; gap: 2rem; }
@@ -241,7 +238,6 @@
   .chip-3 { display: none; }
 }
 
-/* ── Small mobile ≤480px ── */
 @media (max-width: 480px) {
   .hero-visual { width: 165px; height: 165px; }
   .hero-avatar-ring { width: 150px; height: 150px; }

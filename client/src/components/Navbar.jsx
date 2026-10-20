@@ -1,4 +1,4 @@
-// components/Navbar.jsx — Sticky navbar with smooth scroll links and theme toggle
+
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../App';
 import './Navbar.css';

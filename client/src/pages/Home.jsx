@@ -1,4 +1,4 @@
-// pages/Home.jsx — Assembles all portfolio sections in order
+
 import React from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';

@@ -1,4 +1,4 @@
-/* Contact.css — Glass Aurora */
+/* Contact.css*/
 .contact-section { background: transparent; }
 
 /* ── Two-column desktop ── */
@@ -177,16 +177,13 @@
 }
 .submit-btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none !important; }
 
-/* ── Tablet ≤900px ── */
 @media (max-width: 900px) { .contact-grid { gap: 2.5rem; } }
 
-/* ── Mobile ≤768px: single column ── */
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .contact-form { padding: 1.5rem; }
 }
 
-/* ── Small mobile ≤480px ── */
 @media (max-width: 480px) {
   .contact-form { padding: 1.25rem; gap: 1rem; }
   .form-group input,

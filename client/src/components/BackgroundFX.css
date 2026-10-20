@@ -9,7 +9,6 @@
   overflow: hidden;
 }
 
-/* ── Morphing Aurora Blobs ─────────────────────────────────── */
 .blob {
   position: absolute;
   filter: blur(70px);

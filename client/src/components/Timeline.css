@@ -1,4 +1,4 @@
-/* Timeline.css — Glass Aurora */
+
 .timeline-section { background: transparent; }
 
 .timeline-wrapper {
@@ -8,7 +8,7 @@
   padding: 0.5rem 0;
 }
 
-/* Center vertical line */
+
 .timeline-line {
   position: absolute;
   left: 50%;
@@ -19,7 +19,7 @@
   opacity: 0.6;
 }
 
-/* ── Desktop: alternating left / right ── */
+
 .timeline-item {
   display: flex;
   justify-content: flex-end;
@@ -33,7 +33,7 @@
   padding-left: calc(50% + 2.5rem);
 }
 
-/* Glowing dot */
+
 .timeline-dot {
   position: absolute;
   top: 18px;
@@ -50,7 +50,7 @@
   box-shadow: 0 0 0 4px rgba(124,58,237,0.2), 0 0 15px rgba(124,58,237,0.3);
 }
 
-/* Cards — .card class applies glass */
+
 .timeline-card { padding: 1.4rem; width: 100%; max-width: 340px; }
 
 .timeline-card-header {
@@ -97,14 +97,13 @@
 .timeline-period { font-size:0.78rem;  color:var(--text-muted); margin-bottom:0.65rem; }
 .timeline-desc   { font-size:0.85rem;  color:var(--text-muted); line-height:1.65; }
 
-/* ── Tablet ≤768px ── */
 @media (max-width: 768px) {
   .timeline-card { max-width: 300px; padding: 1.1rem; }
   .timeline-item { padding-right: calc(50% + 2rem); padding-bottom: 1.75rem; }
   .timeline-item.right { padding-left: calc(50% + 2rem); }
 }
 
-/* ── Mobile ≤600px: left-aligned single column ── */
+
 @media (max-width: 600px) {
   .timeline-line { left: 18px; }
   .timeline-item,
@@ -113,7 +112,7 @@
   .timeline-card { max-width: 100%; width: 100%; }
 }
 
-/* ── Small mobile ≤480px ── */
+
 @media (max-width: 480px) {
   .timeline-line { left: 14px; }
   .timeline-item,

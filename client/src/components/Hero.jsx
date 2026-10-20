@@ -116,7 +116,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Avatar / Illustration */}
         <motion.div
           className="hero-visual"
           initial={{ opacity: 0, scale: 0.85 }}

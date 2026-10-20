@@ -1,12 +1,7 @@
-/* ============================================================
-   index.css — Glass Aurora Design System
-   Dark  : animated aurora glassmorphism (default)
-   Light : soft pastel glass
-   ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
-/* ── Glass Aurora — Dark Theme (default) ────────────────────── */
+
 :root {
   /* Glass surfaces */
   --glass-bg:     rgba(255,255,255,0.12);
@@ -20,25 +15,24 @@
   --text-primary:   #ffffff;          /* legacy alias */
   --text-secondary: rgba(255,255,255,0.78); /* legacy alias */
 
-  /* Aurora accents */
+  
   --accent:           #00e5ff;
   --accent-dark:      #00b8cc;
   --accent-light:     #80f2ff;
   --accent-secondary: #ff4ecd;
   --accent-glow:      rgba(0,229,255,0.28);
 
-  /* Gradients */
+  
   --gradient-accent: linear-gradient(135deg, #00e5ff, #ff4ecd);
   --gradient-hero:   linear-gradient(135deg, #1b1464, #7b2ff7);
 
-  /* Layout tokens */
+  
   --radius-sm:   10px;
   --radius-md:   14px;
   --radius-lg:   22px;
   --radius-xl:   32px;
   --radius-pill: 99px;
 
-  /* Borders / shadows */
   --border:       rgba(255,255,255,0.28);
   --border-card:  rgba(255,255,255,0.28);
   --shadow-sm:    0 4px 16px rgba(0,0,0,0.20);
@@ -46,19 +40,17 @@
   --shadow-lg:    0 16px 48px rgba(0,0,0,0.40);
   --shadow-glow:  0 0 30px rgba(0,229,255,0.40), 0 0 60px rgba(255,78,205,0.20);
 
-  /* Backgrounds */
+  
   --bg-primary:   transparent;
   --bg-secondary: rgba(255,255,255,0.04);
   --bg-card:      rgba(255,255,255,0.12);
   --bg-nav:       rgba(255,255,255,0.12);
 
-  /* Typography */
   --font-main: 'Inter', sans-serif;
   --font-code: 'Fira Code', monospace;
   --transition: 0.3s ease;
 }
 
-/* ── Glass Aurora — Light / Pastel Mode ─────────────────────── */
 [data-theme='light'] {
   --glass-bg:     rgba(255,255,255,0.55);
   --glass-border: rgba(255,255,255,0.85);
@@ -88,7 +80,6 @@
   --shadow-glow: 0 0 30px rgba(124,58,237,0.25), 0 0 60px rgba(219,39,119,0.15);
 }
 
-/* ── Reset & Base ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
@@ -114,14 +105,14 @@ img { max-width: 100%; display: block; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-/* ── Typography — fluid clamp ─────────────────────────────────── */
+
 h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; color: var(--text); }
 h1 { font-size: clamp(2rem, 6vw, 4rem); }
 h2 { font-size: clamp(1.6rem, 4vw, 2.8rem); }
 h3 { font-size: clamp(1.05rem, 2.5vw, 1.3rem); }
 p  { color: var(--text-secondary); font-size: clamp(0.9rem, 2vw, 1rem); }
 
-/* ── Layout ────────────────────────────────────────────────────── */
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -129,7 +120,7 @@ p  { color: var(--text-secondary); font-size: clamp(0.9rem, 2vw, 1rem); }
   width: 100%;
 }
 
-/* App content sits above BackgroundFX */
+
 .app-content {
   position: relative;
   z-index: 1;
@@ -157,7 +148,7 @@ section {
   margin: 0.85rem auto 0;
 }
 
-/* ── Glass Surface Utility ─────────────────────────────────────── */
+
 .glass,
 .card {
   background: var(--glass-bg);
@@ -178,14 +169,14 @@ section {
   border-color: rgba(124,58,237,0.4);
 }
 
-/* Fallback: no backdrop-filter support */
+
 @supports not (backdrop-filter: blur(1px)) {
   .glass, .card { background: rgba(20,20,50,0.80); }
   [data-theme='light'] .glass,
   [data-theme='light'] .card { background: rgba(255,255,255,0.88); }
 }
 
-/* ── Buttons — Pill Glass ──────────────────────────────────────── */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -201,7 +192,7 @@ section {
   overflow: hidden;
   cursor: pointer;
 }
-/* Diagonal shine sweep */
+
 .btn::before {
   content: '';
   position: absolute;
@@ -265,12 +256,12 @@ section {
 }
 .badge:hover { transform: scale(1.18) rotate(-3deg); }
 
-/* ── Scrollbar ─────────────────────────────────────────────────── */
+
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
 
-/* ── Global Keyframes ──────────────────────────────────────────── */
+
 @keyframes gradientMove {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
@@ -303,7 +294,7 @@ section {
   }
 }
 
-/* ── Responsive ────────────────────────────────────────────────── */
+
 @media (max-width: 768px) {
   section { padding: 4rem 0; }
   .container { padding: 0 1.25rem; }
@@ -315,7 +306,7 @@ section {
   .btn { padding: 0.65rem 1.2rem; font-size: 0.875rem; }
 }
 
-/* ── prefers-reduced-motion — disable all motion ──────────────── */
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -328,7 +319,7 @@ section {
   }
 }
 
-/* ── Cursor Glow + Trail ───────────────────────────────────── */
+
 :root          { --cursor-glow: rgba(255,255,255,0.22); }
 [data-theme="light"] { --cursor-glow: rgba(124,58,237,0.20); }
 
@@ -364,7 +355,7 @@ section {
   }
 }
 
-/* Disable on touch and reduced-motion — belt-and-suspenders alongside the JS check */
+
 @media (hover: none), (prefers-reduced-motion: reduce) {
   .cursor-glow,
   .cursor-trail { display: none; }

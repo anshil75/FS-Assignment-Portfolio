@@ -1,4 +1,4 @@
-/* Certifications.css — Glass Aurora */
+/*certifications.css */
 .cert-section { background: transparent; }
 
 .cert-grid {
@@ -88,7 +88,6 @@
   .cert-card { padding: 1.25rem; }
 }
 
-/* ── Mobile ≤480px ── */
 @media (max-width: 480px) {
   .cert-grid { grid-template-columns: 1fr; }
 }

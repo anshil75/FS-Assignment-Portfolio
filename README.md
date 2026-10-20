@@ -1,4 +1,4 @@
-# MERN Portfolio Website
+## Portfolio Website
 
 A full-stack personal portfolio website built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
 

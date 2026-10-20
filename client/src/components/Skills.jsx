@@ -1,4 +1,4 @@
-// components/Skills.jsx — Animated skill bars with groups and tooltips
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './Skills.css';

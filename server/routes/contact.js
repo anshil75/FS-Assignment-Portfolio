@@ -1,4 +1,4 @@
-// routes/contact.js - Handles POST /api/contact
+
 const express = require('express');
 const { body, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer');
@@ -20,11 +20,11 @@ router.post(
     }
     const { name, email, message } = req.body;
     try {
-      // 1. Save to MongoDB
+      
       const contact = new Contact({ name, email, message });
       await contact.save();
 
-      // 2. Optional: Send Email Notification via Nodemailer
+      
       if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
         try {
           const transporter = nodemailer.createTransport({

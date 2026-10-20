@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import BackgroundFX from './components/BackgroundFX';
 import CursorGlow from './components/CursorGlow';
 
-// ── Theme Context ─────────────────────────────────────────────
+
 export const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
@@ -29,13 +29,13 @@ export default function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <BrowserRouter>
-        {/* Fixed aurora background — z-index 0, pointer-events none */}
+        
         <BackgroundFX />
 
-        {/* Cursor glow + trail — z-index 0, pointer-events none, touch/reduced-motion safe */}
+        
         <CursorGlow />
 
-        {/* All page content sits above BackgroundFX via z-index 1 */}
+        
         <div className="app-content">
           <Navbar />
           <Routes>

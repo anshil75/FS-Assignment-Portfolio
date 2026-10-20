@@ -1,7 +1,4 @@
-// components/BackgroundFX.jsx
-// Fixed layer behind all content.
-// Two morphing aurora blobs + 22 rising bubbles (12 on mobile).
-// No business logic. No state that affects the app. aria-hidden.
+
 import React, { useMemo } from 'react';
 import './BackgroundFX.css';
 
@@ -9,8 +6,7 @@ const TOTAL_BUBBLES = 22;
 
 function rand(min, max) { return Math.random() * (max - min) + min; }
 
-export default function BackgroundFX() {
-  // Stable random values — generated once on mount
+  export default function BackgroundFX() {
   const bubbles = useMemo(() =>
     Array.from({ length: TOTAL_BUBBLES }, (_, i) => ({
       id: i,
