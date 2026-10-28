@@ -1,4 +1,3 @@
-// components/About.jsx — About Me section with scroll animation
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
@@ -42,7 +41,6 @@ export default function About() {
         </FadeIn>
 
         <div className="about-grid">
-          {/* Photo */}
           <FadeIn direction="right" delay={0.1}>
             <div className="about-photo-wrap">
               <div className="about-photo">
@@ -52,7 +50,7 @@ export default function About() {
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const placeholder = e.currentTarget.nextElementSibling;
-                    if (placeholder) placeholder.style.display = 'flex';
+                    if (placeholder) placeholder. style.display = 'flex';
                   }}
                 />
                 <div className="photo-placeholder" style={{ display: 'none' }}>YOUR PHOTO</div>
@@ -60,12 +58,10 @@ export default function About() {
               <div className="about-photo-bg" />
             </div>
           </FadeIn>
-
-          {/* Info */}
           <FadeIn direction="left" delay={0.2}>
             <div className="about-info">
               <h3 className="about-greeting">
-                {/* ⬇️ Replace with your name */}
+          
                 Hi, I'm <span className="accent">Anshil Singh Bisth</span>
               </h3>
 
