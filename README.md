@@ -4,8 +4,7 @@ A full-stack personal portfolio website built with the MERN stack (MongoDB, Expr
 
 ## 🌐 Live Demo
 
-- **Frontend (Vercel):** https://fs-assignment-portfolio.vercel.app/
-- **Backend (Render):** https://portfolio-backend-blg9.onrender.com
+- **Frontend Deployment (Vercel):** https://fs-assignment-portfolio.vercel.app/
 
 ---
 
